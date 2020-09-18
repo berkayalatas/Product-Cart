@@ -1,0 +1,11 @@
+body{
+    background-color: #373837;
+}
+#home{
+    background-color: #212221;
+    background-image: url(/WebDev/CSS3/images/y.png)
+}
+
+#home .card{
+    background-color: #aaa5a5;
+}
