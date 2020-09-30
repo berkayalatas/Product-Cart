@@ -24,7 +24,7 @@ label {
     background-color: #d6d2d2;
 }
 .form-group input:hover{
-    box-shadow: 0 0 10px 4px #323d47;
+    box-shadow: 0 0 10px 5px #323d47;
 }
 
 .card-footer p{
