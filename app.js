@@ -142,11 +142,16 @@ const UIController = (function () {
         },
 
         showTotal: function (total) {
-            var dolarKur = 7.4;
-            var euroKur = 0.84;
-            $(Selectors.totalDolar).text(total);
-            $(Selectors.totalTl).text(parseFloat(dolarKur * total));
-            $(Selectors.totalEuro).text(parseFloat(total * euroKur));
+            fetch('https://api.exchangeratesapi.io/latest?base=USD')
+            .then(response => response.json()) .then (data => {
+                let euroKur = data.rates.EUR;
+                let dolarKur = data.rates.TRY;
+                    $(Selectors.totalDolar).text(total.toFixed(2));
+                    $(Selectors.totalTl).text(parseFloat(dolarKur.toFixed(2) * total.toFixed(2)));
+                    $(Selectors.totalEuro).text(parseFloat(total.toFixed(2) * euroKur.toFixed(2)));
+            }).catch(error => {
+                console.error('Error:',error);
+            })
         },
 
         addProductToForm: function () {

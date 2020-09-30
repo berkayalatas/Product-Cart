@@ -1,11 +1,42 @@
-body{
-    background-color: #373837;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background: url("wallpapers/4.png") ; 
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-weight: 600;
+}
+
+label {
+    font-weight: 900;
+    color: rgb(44, 13, 13);
+}
+
+.form-group input{
+    background-color: #d6d2d2;
+}
+.form-group input:hover{
+    box-shadow: 0 0 10px 4px #323d47;
+}
+
+.card-footer p{
+    font-weight: 500;
+    color: #8a0101;
+    font-size: 19px;
+}
+
 #home{
-    background-color: #212221;
-    background-image: url(/WebDev/CSS3/images/y.png)
+    background-image: linear-gradient(35deg, #4d4747, #223333);
 }
 
 #home .card{
-    background-color: #aaa5a5;
+    background-color: #838181;
 }
