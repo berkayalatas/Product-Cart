@@ -39,6 +39,7 @@ const ProductController = (function(){
             return newProduct;
         },
 
+        
         getTotal: function(){
             let total = 0;
 
